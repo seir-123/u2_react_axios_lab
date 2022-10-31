@@ -17,6 +17,7 @@ In this deliverable, you'll consume the [Star Wars API](https://www.swapi.dev/) 
 4. Create a Landing page with a link to your /starship route.
 5. Setup your App to Router to render a `<StarshipsList />` Component in a /starships route.  (You can start with boilerplate components to get started)
 6. After verifying react-router pathing is working displays the correct component
+7. Test out the SWAPI data in Insomia to see what it looks like and what types of data you'll be working with
 
 ## Primary App Goals
 1. Obtain all of the starships from the API Endpoint: `https://swapi.dev/api/starships`) and display each ship inside your `<StarshipsList/>`. 
