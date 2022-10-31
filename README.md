@@ -24,11 +24,10 @@ In this deliverable, you'll consume the [Star Wars API](https://www.swapi.dev/) 
 
 1. Install and set up your React Router. Create a landing page with links to /Startships, /planets, and /characters
 1. In each of those routes, run a similar API call rendering and mapping data in each component for those endpoints
-
+1. In which component do we want to make these calls? Do we want to, do we need to pass everything as props to each component?
 
 ## Stretch Goals
-1. Add a `<404/>` component, that is rendered by `React-Router` if no matching path is found, or a bad address added manually in the browser.
-1. On both the main list and the single ship view, render a "Loading..." message until the data has finished loading. This can be done with a conditional render that looks at the appropriate piece of state.
+1.Use a guard operator to render a "Loading..." message until the data has finished loading. This can be done with a conditional render that looks at the appropriate piece of state.
 1. Add some custom CSS styling to approximate a cool, sci-fi aesthetic. 
 
 
