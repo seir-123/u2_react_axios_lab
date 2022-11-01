@@ -35,6 +35,7 @@ In your `<StarshipsList/>`, add a link in for that starship. The link should lea
 1. When a starship is clicked, a `<StarshipPage>` component should be rendered. Pass into the StarshipPage the id parameter from the url. Take a look at the answers from this week's `React-Router` codealong and use it as a guide 
 1. When the `<StarshipPage />` component loads, it should make a request to get the full details about the specified ship. Display that ship's name, model, manufacturer, and any other attributes you find interesting. (Hint: useEffect)
 1. The StarshipPage should have a "Return to Starship List" link. Hint: you'll set the link to route back to your `StarshipsList` path. 
+1. Using this syntax, get your Planets, Vehicles, Films, & People to render out the same way
 
 
 
