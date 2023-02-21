@@ -10,7 +10,7 @@ import { Route, Routes } from 'react-router-dom'
 export default function LandingPage () {
 
     return (
-        <div className='LandingPage'>
+        <div className='routes-container'>
 
             <Routes>
               <Route path='/Films' element={<Films/>} />
