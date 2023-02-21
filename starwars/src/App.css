@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poller+One&display=swap');
+
+
+body{
+  background-color:black;
+  font-family: 'Poller One', cursive;
+
+}
+h1{
+  font-size:90px;
+  margin-bottom: 20px;
+}
+.App {
+  text-align: center;
+  color:white;
+}
+h3{
+  color:lightblue;
+}
+button{
+  width: min-content;
+  font-size: 20px;
+  height:auto;
+  background-color:white;
+  color:black;
+  padding:3px;
+  margin: 5px;
+  margin-bottom:10px;
+  border-radius:15px;
+  font-family: 'Poller One', cursive;
+}
+button:hover{
+  background-color:lightblue;
+  color:black;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: 90 vh;
+  margin:20px;
+  grid-gap:20px;
+}
+
+.card{
+  background-color:navy;
+  color:white;
+  height: min-content;
+  padding:15px;
+  border-radius:20px;
+  box-shadow: 2px 2px 5px white;
+}
