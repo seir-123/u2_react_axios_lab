@@ -9,6 +9,9 @@ const Starroutes = () => {
         <li className = "landing">
           <Link to="/" className="about-link">Home</Link>
         </li>
+        <li className = "ships">
+          <Link to="/StarshipsList" className="about-link">Ships</Link>
+        </li>
         <li className = "people">
           <Link to="/Planets" className="about-link">Planets</Link>
         </li>

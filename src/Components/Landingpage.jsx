@@ -1,8 +1,8 @@
-const LandingPage = () => {
+const Landingpage = () => {
   return (
      <div>
-      
+      <h1>YOOOOOOOOOOOOO</h1>
      </div>
   )
 }
-export default LandingPage
+export default Landingpage
