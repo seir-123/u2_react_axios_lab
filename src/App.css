@@ -39,7 +39,12 @@
   padding: 10px;
   height: 100px;
   width: 450px;
-  
+  background-color: #006688;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 
