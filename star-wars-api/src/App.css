@@ -1,0 +1,46 @@
+.header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+.App-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+a:link {
+    text-decoration: none;
+    /* background-color: white; */
+    border: 3px solid;
+    border-radius: 30%;
+    color: black;
+    padding: 5px;
+}
+
+a:link:hover {
+    transform: scale(1.04);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    height: 100vh;
+    margin: 20px;
+    
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: yellow;
+    background-color: grey;
+}
+
+.card:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 8px grey;
+}
