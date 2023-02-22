@@ -1,6 +1,6 @@
 const StarshipsList = (props) => {
   return (
-    <div className="grid">
+    <div className="ship-grid">
       {props.starships.map((starship) => (
         <div key={starship.name} className="card">
                 <h3>{starship.name}</h3>
