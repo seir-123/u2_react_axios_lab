@@ -1,13 +1,13 @@
 
 
-export default function StarshipsList ({StarshipsList}) {
+export default function StarshipsList (props) {
 
     return (
        
-        <div className='StarshipsList'>
+        <div>
+           
            { 
-            
-                StarshipsList.map((starshipList) => {
+            props.StarshipsList.map((starshipList) => {
                     <h1>{starshipList.name}</h1>
                 })
             }

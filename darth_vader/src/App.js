@@ -11,7 +11,16 @@ import LandingPage from './components/LandingPage'
 
 const App = () => {
   const [starships, setStarships] = useState([])
- 
+  const [films, setFilms] = useState([])
+
+  useEffect(() => {
+      const getFilms = async () => {
+        const response = await axios.get(`${BASE_URL}/Films`) 
+        console.log(response.data.results)
+        setFilms(response.data.results)
+      }
+      getFilms()
+    }, [])
 
 
 useEffect(() => {

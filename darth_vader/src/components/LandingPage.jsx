@@ -1,17 +1,14 @@
-import Nav from "..Nav"
-import { FILMS_URL } from '../globals'
-import People from '../People'
-import Planets from '../Planets'
-import Species from '../Species'
-import Starships from '../Starships'
-import Vehicles from '../Vehicles'
+
+import Films from './Films'
+import People from './People'
+import Planets from './Planets'
+import Species from './Species'
+import Starships from './Starships'
+import Vehicles from './Vehicles'
 import { Route, Routes } from 'react-router-dom'
 
 
 export default function LandingPage () {
-
-
-    
 
     return (
         <div className='routes-container'>
@@ -23,10 +20,11 @@ export default function LandingPage () {
               <Route path='/Species' element={<Species/>} />
               <Route path='/Starships' element={<Starships/>} />
               <Route path='/Vehicles' element={<Vehicles/>} />
+              <Route path='/' element={<LandingPage/>} />
 
             </Routes>
 
-        <Nav />
+        
         </div>
     )
 }

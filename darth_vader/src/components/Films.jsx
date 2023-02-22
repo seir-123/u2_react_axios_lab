@@ -1,10 +1,13 @@
-export default function Films ({Films}) {
+
+export default function Films (props) {
+
+  
 
     return (
         <div>
-        <h1>The StarWars ships list</h1>
+        <h1>Films List</h1>
         {
-            Films.map((film) => {
+            props.Films.map((film) => {
                 <h1>{film.name}</h1>
             })
         }
