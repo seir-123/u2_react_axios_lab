@@ -24,7 +24,7 @@ In this deliverable, you'll consume the [Star Wars API](https://swapi.dev/api/st
 1. Use `useEffect` to make the request as soon as your topmost-level component loads (App), and store it in state (starShips).
 1. Map and render all information from your API call
 
-1. Add links on your landing page to /Startships, /planets, and /characters
+1. Add links on your landing page to /Starships, /planets, and /characters
 1. In each of those routes, run a similar API call rendering and mapping data in each component for those endpoints
 1. In which component do we want to make these calls? Do we want to, do we need to pass everything as props to each component?
 
