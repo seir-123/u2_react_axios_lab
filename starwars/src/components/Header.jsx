@@ -2,8 +2,8 @@ import Nav from './Nav'
 
 export default function Header () {
     return (
-        <div className = "Header">
-            <h1>StarWars Data</h1>
+        <div className = "header">
+            <h1 className='header1'>Starwars Data</h1>
                 <Nav/>
             </div>
     )

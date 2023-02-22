@@ -1,5 +1,3 @@
-
-
 export default function StarshipList ({starShips}) {
     return (
         <div>

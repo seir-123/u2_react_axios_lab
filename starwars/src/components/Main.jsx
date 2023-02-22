@@ -1,12 +1,16 @@
 import { Route, Routes } from 'react-router-dom'
 import {useState, useEffect} from 'react'
+import Home from './Home'
 import StarshipList from './StarshipList'
-import axios from 'axios'
+import Planets from './Planets'
+import Characters from './Characters'
 import { PLANETS_PATH } from '../globals'
 import { SHIP_PATH } from '../globals'
 import { CHARACTERS_PATH } from '../globals' 
-import Planets from './Planets'
-import Characters from './Characters'
+import axios from 'axios'
+
+
+
 
 export default function Main () {
 
@@ -15,8 +19,8 @@ export default function Main () {
     const [characters, setCharacters] = useState([])
 
 
-      useEffect(() => {
-    const getPlanets = async () => {
+    useEffect(() => {
+      const getPlanets = async () => {
       const response = await axios.get(`${ PLANETS_PATH }`)
       console.log(response.data.results)
       setPlanets(response.data.results)
@@ -53,24 +57,22 @@ export default function Main () {
   },[])
 
     return (
-        <div className = "Main">
-            
+        <div className = "main">   
             <Routes>
-            <Route  path='/StarshipList'
-            element={<StarshipList
-                             starShips={starShips}/>} />
+                <Route  path='/StarshipList'
+                element={<StarshipList
+                                starShips={starShips}/>} />
 
-            <Route path='/Planets'
-            element={<Planets
-                             planets={planets}/>} />
+                <Route path='/Planets'
+                element={<Planets
+                                planets={planets}/>} />
 
-            <Route path='/Characters'
-            element={<Characters
-                             characters={characters}/>} />                 
-
-
+                <Route path='/Characters'
+                element={<Characters
+                                characters={characters}/>} />
+                <Route path='/' 
+                element={<Home/>}/>                            
             </Routes>
-
         </div>
     )
 }
