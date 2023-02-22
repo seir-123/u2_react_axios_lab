@@ -1,10 +1,19 @@
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+
 export default function CharactersList(props) {
-    console.log(props.characters)
+
+    let navigate = useNavigate()
+
+    const showCharacter = (index) => {
+        navigate(`${index}`)
+    }
+
     return (
         <div className="grid">
             {
-                props.characters.map((character) => (
-                    <div key={character.id} className="card">
+                props.characters.map((character, index) => (
+                    <div key={index} className="card" onClick={() => showCharacter(index)}>
                         <h3>{character.name}</h3>
                     </div>
                 ))

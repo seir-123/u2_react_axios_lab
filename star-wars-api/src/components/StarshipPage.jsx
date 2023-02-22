@@ -7,19 +7,19 @@ export default function StarshipPage(props) {
 
     const [ship, setShip] = useState('')
 
-    let { id } = useParams()
+    let { index } = useParams()
 
     useEffect(() => {
-        let selectedShip = props.starships.find(
-            (ship) => ship.id === parseInt(id)
-        )
+        let selectedShip = props.starships[index]
         setShip(selectedShip)
-    }, [props.name, id])
+    }, [])
 
     return (
         <div>
             <div>
                 <h1>{ship.name}</h1>
+                <h3>Model: {ship.model}</h3>
+                <h3>Manufacturer: {ship.manufacturer}</h3>
             </div>
             <Link to="/StarshipsList">return</Link>
         </div>

@@ -5,6 +5,8 @@ import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
 import { useState, useEffect } from 'react';
 import StarshipPage from './StarshipPage'
+import PlanetPage from './PlanetPage'
+import CharacterPage from './CharacterPage'
 
 export default function Main() {
     const [starships, setStarships] = useState([])
@@ -33,9 +35,11 @@ export default function Main() {
         <div>
             <Routes>
                 <Route path="/StarshipsList" element={<StarshipsList starships={starships}/>} />
-                <Route path="/StarshipsList/:id" element={<StarshipPage starships={starships} />} />
+                <Route path="/StarshipsList/:index" element={<StarshipPage starships={starships} />} />
                 <Route path="/PlanetsList" element={<PlanetsList planets={planets}/>} />
+                <Route path="/PlanetsList/:index" element={<PlanetPage planets={planets} />} />
                 <Route path="/CharactersList" element={<CharactersList characters={characters}/>} />
+                <Route path="/CharactersList/:index" element={<CharacterPage characters={characters} />} />
             </Routes>
         </div>
     )
