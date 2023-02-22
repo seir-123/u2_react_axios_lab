@@ -5,6 +5,9 @@ import Planets from "./Planets";
 import Characters from "./Characters";
 
 const Main = () => {
+
+
+
     return (
         <div className="Main">
             <Routes>

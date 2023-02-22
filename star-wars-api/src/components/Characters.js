@@ -20,8 +20,18 @@ const Characters = () => {
     },[])
 
     return (
-        <div>
-            <CharacterLists characters={characters}/>
+        <div className="fullContainer">
+            <h2 className="title">List of Characters</h2>
+            <div className="listContainer">
+                {
+                    characters.map((character) => (
+                        <div key={character.name} className="item">
+                            <h3>{character.name}</h3>
+                            
+                        </div>
+                    ))
+                }
+            </div>
         </div>
         
         

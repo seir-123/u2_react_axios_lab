@@ -1,8 +1,7 @@
 import { Link, withRouter } from 'react-router-dom'
 
 
-//learned about NavLinks via this stack Overflow thread: https://stackoverflow.com/questions/68635957/changing-the-color-of-the-active-nav-item-in-reactjs
-//used them in order to use ActiveClassNames and change the link colors when selected
+
 
 const Nav = () => {
     return (
