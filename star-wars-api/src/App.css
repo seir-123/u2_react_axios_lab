@@ -1,0 +1,39 @@
+.App {
+  text-align: center;
+  background: url("https://cdn.wallpapersafari.com/90/29/4LbDOE.jpg");
+  background-size: cover;
+  height: 100vh;
+  color: white;
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 500px;
+  margin:auto;
+  color: white;
+}
+.navLinks {
+  text-decoration: none;
+}
+.navLinks:visited{
+  color:white;
+}
+.selectedNav {
+  color: #FFE81F;
+}
+.fullContainer {
+  background-color: rgb(0, 0, 0,.5);
+  border: 3px solid #FFE81F;
+  margin: auto;
+  width:30vw;
+  padding: 15px;
+}
+.title {
+  border-bottom: 3px solid #FFE81F;
+  width:25vw;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  
+}
