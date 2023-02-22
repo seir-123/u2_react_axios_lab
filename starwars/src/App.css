@@ -16,7 +16,10 @@ h1{
   color:white;
 }
 h3{
-  color:lightblue;
+  color:rgb(57, 57, 205)
+}
+h4{
+  color:rgb(146, 146, 255)
 }
 button{
   width: min-content;
@@ -44,7 +47,7 @@ button:hover{
 }
 
 .card{
-  background-color:navy;
+  background-color:rgba(121, 121, 184, 0.153);
   color:white;
   height: min-content;
   padding:15px;
