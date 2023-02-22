@@ -15,8 +15,8 @@ export default function PlanetPage(props) {
     }, [])
 
     return (
-        <div>
-            <div>
+        <div className="smallCard">
+            <div className="info">
                 <h1>{character.name}</h1>
                 <h3>Height: {character.height}</h3>
                 <h3>Born: {character.birth_year}</h3>

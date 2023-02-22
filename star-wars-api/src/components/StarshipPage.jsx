@@ -15,8 +15,8 @@ export default function StarshipPage(props) {
     }, [])
 
     return (
-        <div>
-            <div>
+        <div className="smallCard">
+            <div className="info">
                 <h1>{ship.name}</h1>
                 <h3>Model: {ship.model}</h3>
                 <h3>Manufacturer: {ship.manufacturer}</h3>

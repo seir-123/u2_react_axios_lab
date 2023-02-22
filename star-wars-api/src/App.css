@@ -44,3 +44,28 @@ a:link:hover {
     transform: scale(1.03);
     box-shadow: 8px 8px 8px grey;
 }
+
+.smallCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    border: 5px solid;
+    width: 600px;
+    padding: 10px;
+}
+
+.smallCard:hover {
+    transform: scale(1.03);
+    box-shadow: 8px 8px 8px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
