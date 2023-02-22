@@ -1,6 +1,6 @@
 const Landingpage = () => {
   return (
-     <div>
+     <div className="home">
       <h1>YOOOOOOOOOOOOO</h1>
      </div>
   )

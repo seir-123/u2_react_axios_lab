@@ -17,8 +17,8 @@ function App() {
 
   const [starships, setStarships] = useState ([])
   const [planets, setPlanets] = useState ([])
-  // const [people, setPeople] = useState ([])
-  // const [species, setSpecies] = useState ([])
+  const [people, setPeople] = useState ([])
+  const [species, setSpecies] = useState ([])
 
   useEffect (() => {
     const getStarships = async () => {
@@ -37,21 +37,21 @@ function App() {
     getPlanets()
   }, [])
 
-  // useEffect (() => {
-  //   const getPeople = async () => {
-  //     const response = await axios.get(`${BASE_URL}/people`)
-  //     setPeople(response.data.results)
-  //   }
-  //   getPeople()
-  // }, [])
+  useEffect (() => {
+    const getPeople = async () => {
+      const response = await axios.get(`${BASE_URL}/people`)
+      setPeople(response.data.results)
+    }
+    getPeople()
+  }, [])
 
-  // useEffect (() => {
-  //   const getSpecies = async () => {
-  //     const response = await axios.get(`${BASE_URL}/species`)
-  //     setSpecies(response.data.results)
-  //   }
-  //   getSpecies()
-  // }, [])
+  useEffect (() => {
+    const getSpecies = async () => {
+      const response = await axios.get(`${BASE_URL}/species`)
+      setSpecies(response.data.results)
+    }
+    getSpecies()
+  }, [])
 
 
 
@@ -67,9 +67,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Landingpage/>} />
         <Route path= "/StarshipsList" element={<StarshipsList starships={starships} />} />
-        <Route path="/Planets" element={<Planets Planets={planets} />} />
-        {/* <Route path="/People" element={<People/>} />
-        <Route path="/Species" element={<Species />} /> */}
+        <Route path="/Planets" element={<Planets planets={planets} />} />
+        <Route path="/People" element={<People people={people} />} />
+        <Route path="/Species" element={<Species species={species} />} /> 
       </Routes>
      
                       
