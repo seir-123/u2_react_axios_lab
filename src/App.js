@@ -9,6 +9,7 @@ import Planets from './Components/Planets'
 import People from './Components/People'
 import Species from './Components/Species'
 import Landingpage from './Components/Landingpage'
+import Starshippage from './Components/Starshippage';
 
 
 
@@ -70,6 +71,7 @@ function App() {
         <Route path="/Planets" element={<Planets planets={planets} />} />
         <Route path="/People" element={<People people={people} />} />
         <Route path="/Species" element={<Species species={species} />} /> 
+        <Route path="/Starshippage" element={<Starshippage starships={starships}/>} />
       </Routes>
      
                       
