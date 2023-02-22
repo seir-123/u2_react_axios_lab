@@ -1,105 +1,32 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
-import { useState } from "react";
-import StarshipsList from "./StarshipsList";
-import FilmsList from "./FilmsList";
-import PeopleList from "./PeopleList";
-import PlanetsList from "./PlanetsList";
-import SpeciesList from "./SpeciesList";
-import VehiclesList from "./VehiclesList";
-
 export default function Nav() {
-  const [showStarships, setShowStarships] = useState(false);
-  const [showFilms, setShowFilms] = useState(false);
-  const [showPeople, setShowPeople] = useState(false);
-  const [showPlanets, setShowPlanets] = useState(false);
-  const [showSpecies, setShowSpecies] = useState(false);
-  const [showVehicles, setShowVehicles] = useState(false);
-
-  const hideAll = () => {
-    setShowFilms(false);
-    setShowStarships(false);
-    setShowPeople(false);
-    setShowPlanets(false);
-    setShowSpecies(false);
-    setShowVehicles(false);
-  };
-
-  const handleStarshipsClick = () => {
-    hideAll();
-    setShowStarships(true);
-  };
-  const handleFilmsClick = () => {
-    hideAll();
-    setShowFilms(true);
-  };
-  const handlePeopleClick = () => {
-    hideAll();
-    setShowPeople(true);
-  };
-  const handlePlanetsClick = () => {
-    hideAll();
-    setShowPlanets(true);
-  };
-  const handleSpeciesClick = () => {
-    hideAll();
-    setShowSpecies(true);
-  };
-  const handleVehiclesClick = () => {
-    hideAll();
-    setShowVehicles(true);
-  };
-
   return (
     <nav>
       <ul>
         <li>
-          {/* <a href="#starships" onClick={handleStarshipsClick}>
-            Starships
-          </a> */}
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          {/* <a href="#films" onClick={handleFilmsClick}>
-            Films
-          </a> */}
           <NavLink to="FilmsList">Films</NavLink>
         </li>
         <li>
-          {/* <a href="#people" onClick={handlePeopleClick}>
-            People
-          </a> */}
-          <NavLink to='PeopleList'>People</NavLink>
+          <NavLink to="PeopleList">People</NavLink>
         </li>
         <li>
-          {/* <a href="#planets" onClick={handlePlanetsClick}>
-            Planets
-          </a> */}
-          <NavLink to='PlanetsList'>Planets</NavLink>
+          <NavLink to="PlanetsList">Planets</NavLink>
         </li>
         <li>
-          {/* <a href="#species" onClick={handleSpeciesClick}>
-            Species
-          </a> */}
-          <NavLink to='SpeciesList'>Species</NavLink>
+          <NavLink to="SpeciesList">Species</NavLink>
         </li>
         <li>
-          {/* <a href="#vehicles" onClick={handleVehiclesClick}>
-            Vehicles
-          </a> */}
           <NavLink to="StarshipsList">Starships</NavLink>
         </li>
         <li>
-            <NavLink to="VehiclesList">Vehicles</NavLink>
+          <NavLink to="VehiclesList">Vehicles</NavLink>
         </li>
       </ul>
-      {/* {showStarships && <StarshipsList />}
-            {showFilms && <FilmsList />}
-            {showPeople && <PeopleList />}
-            {showPlanets && <PlanetsList />}
-            {showSpecies && <SpeciesList />}
-            {showVehicles && <VehiclesList />} */}
     </nav>
   );
 }
