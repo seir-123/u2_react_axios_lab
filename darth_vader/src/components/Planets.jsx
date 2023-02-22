@@ -1,9 +1,13 @@
-export default function Planets (props) {
+export default function Planets ({Planets}) {
 
     return (
-        <div className='Planets'>
-
-            
-        </div>
+           <div>
+        <h1>Planets List</h1>
+        {
+            Planets.map((planets) => {
+                <h1>{planets.name}</h1>
+            })
+        }
+    </div>
     )
 }

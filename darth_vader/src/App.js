@@ -4,14 +4,14 @@ import axios from 'axios'
 import { BASE_URL } from './globals'
 import StarshipList from './components/StarshipsList'
 import LandingPage from './components/LandingPage'
-import Header from './components/Header'
+
 
 
 
 
 const App = () => {
   const [starships, setStarships] = useState([])
-  //  const [selectedStarship, setSelectedStarship] = useState(null)
+ 
 
 
 useEffect(() => {
@@ -27,7 +27,7 @@ useEffect(() => {
     <div className='App'>
   <StarshipList starships={starships} />
   <LandingPage />
-  <Header />
+ 
     </div>
   );
 }

@@ -1,9 +1,13 @@
-export default function Species (props) {
+export default function Species ({Species}) {
 
     return (
-        <div className='Species'>
-
-            
-        </div>
+        <div>
+        <h1>Species List</h1>
+        {
+            Species.map((species) => {
+                <h1>{species.name}</h1>
+            })
+        }
+    </div>
     )
 }

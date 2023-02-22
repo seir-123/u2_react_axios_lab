@@ -1,9 +1,13 @@
-export default function People (props){
+export default function People ({People}){
 
     return (
-        <div className='People'>
-
-            
-        </div>
+        <div>
+        <h1>People List</h1>
+        {
+            People.map((people) => {
+                <h1>{people.name}</h1>
+            })
+        }
+    </div>
     )
 }
