@@ -1,31 +1,25 @@
-import { useState, useEffect } from 'react'
-import  axios  from 'axios'
-import { PLANETS_URL } from '../globals'
+import { Link, useNavigate } from "react-router-dom";
 
-
-export default function PlanetsList () {
-    const [planets, setPlanets] = useState([])
-
-    useEffect(() => {
-      const getPlanets = async () => {
-        const response = await axios.get(`${PLANETS_URL}`)
-        console.log(response.data.results)
-        setPlanets(response.data.results)
-      }
-  
-      getPlanets()
-    }, [])
-    console.log (planets)
-    return (
-        <div className="grid" id="planets">
-            {
-                planets.map((planet) => (
-                    <div key={planet.name} className="card">
-                        <h2>{planet.name}</h2>
-                        <h3>{planet.terrain}</h3>
-                    </div>
-                ))
-            }
-        </div>
-    )
+export default function PlanetsList(props) {
+  let navigate = useNavigate();
+  const showPlanets = (index) => {
+    navigate(`${index}`);
+  };
+  return (
+    <div>
+      <Link to="/">Back</Link>
+      <div className="grid" id="planets">
+        {props.planets.map((planet, i) => (
+          <div
+            key={planet.name}
+            onClick={() => showPlanets(i)}
+            className="card"
+          >
+            <h2>{planet.name}</h2>
+            <h3>{planet.terrain}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

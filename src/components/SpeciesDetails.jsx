@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const FilmDetails = (props) => {
-  const [film, setFilm] = useState("");
+const SpeciesDetails = (props) => {
+  const [species, setSpecies] = useState("");
 
   let { index } = useParams();
   useEffect(() => {
-    let selectedFilm = props.film[index];
-    setFilm(selectedFilm);
+    let selectedSpecies = props.species[index];
+    setSpecies(selectedSpecies);
   });
 
-  return film ? (
+  return species ? (
     <div className="detail">
-      <Link to="/Films">Back</Link>
+      <Link to="/Species">Back</Link>
 
       <div className="detail-header">
         <div
@@ -45,4 +45,4 @@ const FilmDetails = (props) => {
   );
 };
 
-export default FilmDetails;
+export default SpeciesDetails;

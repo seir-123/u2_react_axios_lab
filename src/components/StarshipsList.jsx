@@ -1,31 +1,25 @@
-import { useState, useEffect } from 'react'
-import  axios  from 'axios'
-import { STARSHIPS_URL } from '../globals'
+import { Link, useNavigate } from "react-router-dom";
 
-
-export default function StarshipsList () {
-    const [starships, setStarships] = useState([])
-
-    useEffect(() => {
-      const getStarships = async () => {
-        const response = await axios.get(`${STARSHIPS_URL}`)
-        console.log(response.data.results)
-        setStarships(response.data.results)
-      }
-  
-      getStarships()
-    }, [])
-    console.log (starships)
-    return (
-        <div className="grid" id="starships">
-            {
-                starships.map((starship) => (
-                    <div key={starship.name} className="card">
-                        <h2>{starship.name}</h2>
-                        <h3>{starship.manufacturer}</h3>
-                    </div>
-                ))
-            }
-        </div>
-    )
+export default function StarshipsList(props) {
+  let navigate = useNavigate();
+  const showStarship = (index) => {
+    navigate(`${index}`);
+  };
+  return (
+    <div>
+      <Link to="/">Back</Link>
+      <div className="grid" id="starships">
+        {props.starships.map((starship, i) => (
+          <div
+            className="card"
+            onClick={() => showStarship(i)}
+            key={starship.name}
+          >
+            <h2>{starship.name}</h2>
+            <h3>{starship.manufacturer}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

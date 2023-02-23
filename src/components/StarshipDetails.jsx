@@ -1,18 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-const FilmDetails = (props) => {
-  const [film, setFilm] = useState("");
+const StarshipDetails = (props) => {
+  const [starship, setStarship] = useState("");
 
   let { index } = useParams();
+
   useEffect(() => {
-    let selectedFilm = props.film[index];
-    setFilm(selectedFilm);
+    let selectedStarship = props.starships[index];
+    setStarship(selectedStarship);
   });
 
-  return film ? (
+  return starship ? (
     <div className="detail">
-      <Link to="/Films">Back</Link>
+      <Link to="/Starships">Back</Link>
 
       <div className="detail-header">
         <div
@@ -41,8 +42,8 @@ const FilmDetails = (props) => {
       </div>
     </div>
   ) : (
-    <h1>Species not found</h1>
+    <h1>Starship not found</h1>
   );
 };
 
-export default FilmDetails;
+export default StarshipDetails;

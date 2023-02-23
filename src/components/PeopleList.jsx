@@ -1,31 +1,21 @@
-import { useState, useEffect } from 'react'
-import  axios  from 'axios'
-import { PEOPLE_URL } from '../globals'
+import { Link, useNavigate } from "react-router-dom";
 
-
-export default function PeopleList () {
-    const [people, setPeople] = useState([])
-
-    useEffect(() => {
-      const getPeople = async () => {
-        const response = await axios.get(`${PEOPLE_URL}`)
-        console.log(response.data.results)
-        setPeople(response.data.results)
-      }
-  
-      getPeople()
-    }, [])
-    console.log (people)
-    return (
-        <div className="grid" id="people">
-            {
-                people.map((person) => (
-                    <div key={person.name} className="card">
-                        <h2>{person.name}</h2>
-                        <h3>{person.birth_year}</h3>
-                    </div>
-                ))
-            }
-        </div>
-    )
+export default function PeopleList(props) {
+  let navigate = useNavigate();
+  const showPeople = (index) => {
+    navigate(`${index}`);
+  };
+  return (
+    <div>
+      <Link to="/">Back</Link>
+      <div className="grid" id="people">
+        {props.people.map((person, i) => (
+          <div key={person.name} onClick={() => showPeople(i)} className="card">
+            <h2>{person.name}</h2>
+            <h3>{person.birth_year}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

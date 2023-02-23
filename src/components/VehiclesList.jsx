@@ -1,31 +1,26 @@
-import { useState, useEffect } from 'react'
-import  axios  from 'axios'
-import { VEHICLES_URL } from '../globals'
+import { Link, useNavigate } from "react-router-dom";
 
+export default function VehiclesList(props) {
+  let navigate = useNavigate();
+  const showVehicle = (index) => {
+    navigate(`${index}`);
+  };
 
-export default function VehiclesList () {
-    const [vehicles, setVehicles] = useState([])
-
-    useEffect(() => {
-      const getVehicles = async () => {
-        const response = await axios.get(`${VEHICLES_URL}`)
-        console.log(response.data.results)
-        setVehicles(response.data.results)
-      }
-  
-      getVehicles()
-    }, [])
-    console.log (vehicles)
-    return (
-        <div className="grid" id="vehicles">
-            {
-                vehicles.map((vehicle) => (
-                    <div key={vehicle.title} className="card">
-                        <h2>{vehicle.name}</h2>
-                        <h3>{vehicle.manufacturer}</h3>
-                    </div>
-                ))
-            }
-        </div>
-    )
+  return (
+    <div>
+      <Link to="/">Back</Link>
+      <div className="grid" id="vehicles">
+        {props.vehicles.map((vehicle, i) => (
+          <div
+            className="card"
+            onClick={() => showVehicle(i)}
+            key={vehicle.title}
+          >
+            <h2>{vehicle.name}</h2>
+            <h3>{vehicle.manufacturer}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }

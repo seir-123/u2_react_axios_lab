@@ -9,22 +9,22 @@ export default function Nav() {
           <NavLink to="/">Home</NavLink>
         </li>
         <li>
-          <NavLink to="FilmsList">Films</NavLink>
+          <NavLink to="Films">Films</NavLink>
         </li>
         <li>
-          <NavLink to="PeopleList">People</NavLink>
+          <NavLink to="People">People</NavLink>
         </li>
         <li>
-          <NavLink to="PlanetsList">Planets</NavLink>
+          <NavLink to="Planets">Planets</NavLink>
         </li>
         <li>
-          <NavLink to="SpeciesList">Species</NavLink>
+          <NavLink to="Species">Species</NavLink>
         </li>
         <li>
-          <NavLink to="StarshipsList">Starships</NavLink>
+          <NavLink to="Starships">Starships</NavLink>
         </li>
         <li>
-          <NavLink to="VehiclesList">Vehicles</NavLink>
+          <NavLink to="Vehicles">Vehicles</NavLink>
         </li>
       </ul>
     </nav>
