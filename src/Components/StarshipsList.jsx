@@ -7,8 +7,8 @@ const StarshipsList = (props) => {
 let navigate = useNavigate()
 
 
-const showShip = (ship) => {
-  navigate(`${ship.index}`)
+const showShip = (index) => {
+  navigate(`${index}`)
 }
 
 
@@ -16,8 +16,8 @@ const showShip = (ship) => {
 
 return (
     <div className="ship-grid">
-      {props.starships.map((starship) => (
-        <div className="card" onClick={() => showShip(starship)} key={starship.index}>
+      {props.starships.map((starship, i) => (
+        <div className="card" onClick={() => showShip(i)} key={i}>
           <Link to={'/ships/${starship.index}'}></Link>
                 <h3>{starship.name}</h3>
                 <h3>{starship.manufacturer}</h3>

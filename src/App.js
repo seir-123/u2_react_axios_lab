@@ -71,7 +71,7 @@ function App() {
         <Route path="/Planets" element={<Planets planets={planets} />} />
         <Route path="/People" element={<People people={people} />} />
         <Route path="/Species" element={<Species species={species} />} /> 
-        <Route path="/Starshippage" element={<Starshippage starships={starships}/>} />
+        <Route path="/StarshipsList/:index" element={<Starshippage starships={starships}/>} />
       </Routes>
      
                       

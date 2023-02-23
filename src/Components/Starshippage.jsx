@@ -13,7 +13,9 @@ const Starshippage = (props) => {
   let { index } = useParams()
 
   useEffect(() => {
-    let shipSelection = props.starships.find((ship) => ship.index === parseInt(index))
+    let shipSelection = props.starships[index]
+    console.log("🚀 ~ file: Starshippage.jsx:17 ~ useEffect ~ shipSelection:", shipSelection)
+    
     showShip(shipSelection)
   })
 
@@ -21,8 +23,9 @@ const Starshippage = (props) => {
 return (
   <div className="detail">
     <h1>{ship.name}</h1>
+    
     <button><Link to="/StarshipsList">Back</Link></button>
   </div>
-  ) : Null <h1 className="loading">Loading. . .</h1>
+  ) 
 }
 export default Starshippage
