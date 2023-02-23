@@ -1,7 +1,12 @@
 .App {
   text-align: center;
+  background-color: rgb(108, 108, 108);
+  height: 100vh;
 }
 
+h1{
+  margin: 0;
+}
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
@@ -16,7 +21,7 @@ header {
   color: white;
 }
 
-.starship-card:hover {
+.card:hover {
   color: pink;
   cursor: pointer;
 }

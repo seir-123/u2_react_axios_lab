@@ -19,7 +19,6 @@ export default function StarshipsList(){
 
   const showShip = (key) => {
     navigate(`${key}`)
-    console.log(key)
   }
 
   return(
@@ -27,7 +26,7 @@ export default function StarshipsList(){
       <h2>List of Starships</h2>
       {
         starships.map((starship, key) => (
-          <div key={key} onClick={()=>showShip(key)} className="starship-card">
+          <div key={key} onClick={()=>showShip(key)} className="card">
             <h3>{starship.name}</h3>
           </div>
         ))
