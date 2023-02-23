@@ -13,6 +13,9 @@ function App() {
       <body>
         <Main/>
       </body>
+      <footer>
+        <h5>Definitely not copyrighted 2023</h5>
+      </footer>
     </div>
   );
 }

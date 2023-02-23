@@ -1,12 +1,21 @@
 .App {
   text-align: center;
-  background-color: rgb(108, 108, 108);
-  height: 100vh;
+  /* background-color: rgb(108, 108, 108); */
+  background-image: url("https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80");
+  height: 200vh;
+  font-family: helvetica;
+  color: white;
 }
 
 h1{
   margin: 0;
+  font-size: 5vw;
 }
+
+h2 {
+  font-size: 2vw;
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-evenly;
@@ -16,8 +25,12 @@ h1{
   color: white;
 }
 
+.nav-link:hover {
+  color: pink;
+  cursor: pointer;
+}
+
 header {
-  background-color: black;
   color: white;
 }
 
@@ -28,10 +41,20 @@ header {
 
 
 .back-link {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .back-link:hover {
   color: pink;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  text-align: center;
 }
