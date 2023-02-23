@@ -4,11 +4,11 @@ import axios from 'axios'
 import StarshipsList from './components/StarshipsList'
 import Nav from './components/Nav'
 import Home from './components/Home'
-// import Films from './components/Films'
+import Films from './components/Films'
 import People from './components/People'
 import Planets from './components/Planets'
 import Species from './components/Species'
-import Starships from './components/Starships'
+import StarshipsDetails from './components/StarshipsDetails'
 import Vehicles from './components/Vehicles'
 import { Route, Routes } from 'react-router-dom'
 import { BASE_URL } from './globals'
@@ -23,14 +23,22 @@ import { VEHICLES_URL } from './globals'
 
 
 
+
 const App = () => {
-  const [starships, setStarships] = useState([])
+  const [starshipsDetails, setStarshipsDetails] = useState([])
   const [films, setFilms] = useState([])
   const [people, setPeople] = useState([])
   const [planets, setPlanets] = useState([])
   const [species, setSpecies] = useState ([])
   const [vehicles, setVehicles] = useState([])
 
+  useEffect (() => {
+    const getData = async () => {
+    const response = await axios.get(`${BASE_URL}`)  
+    setStarshipsDetails(response.data.results)
+    }
+    getData()
+  })
   useEffect(() => {
       const getFilms = async () => {
         const response = await axios.get(`${FILMS_URL}`) 
@@ -42,12 +50,12 @@ const App = () => {
 
 
 useEffect(() => {
-  const getStartships = async () => {
+  const getStartshipsDetails = async () => {
     const response = await axios.get(`${SHIPS_URL}`) 
     // console.log(response.data.results)
-    setStarships(response.data.results)
+    setStarshipsDetails(response.data.results)
   }
-  getStartships()
+  getStartshipsDetails()
 }, [])
 
  useEffect(() => {
@@ -98,13 +106,13 @@ useEffect(() => {
           <main>
             <Routes>
               <Route path='/' element={<Home/>}></Route>  
-              {/* <Route path='/Films' element={<Films/>}></Route> */}
+              <Route path='/Films' element={<Films/>}></Route>
               <Route path='/People' element={<People/>}></Route>
               <Route path='/Planets' element={<Planets/>}></Route>
               <Route path='/Species' element={<Species/>}></Route>
-              <Route path='/Starships' element={<Starships/>}></Route>
+              <Route path='/StarshipsDetails' element={<StarshipsDetails/>}></Route>
               <Route path='/Vehicles' element={<Vehicles/>}></Route>
-              <Route path='/StarshipsList' element={<StarshipsList starships={starships}/>}></Route>
+              <Route path='/StarshipsList' element={<StarshipsList starshipsDetails={starshipsDetails}/>}></Route>
             </Routes>
           </main>
         

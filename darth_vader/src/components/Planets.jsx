@@ -1,8 +1,10 @@
+import React from 'react'
 import { Link, useNavigate} from 'react-router-dom'
 
 
 export default function Planets (props) {
     let navigate = useNavigate()
+    
     const showPlanets = (index) => {
         navigate(`${index}`)
     }
@@ -11,13 +13,11 @@ export default function Planets (props) {
         <div>
         <Link to='/'>Home</Link>
         <div className='grid' id='planets'>
-            {props.planets.map((planet, i) =>
-            <div className='card'
-            onClick={() => showPlanets(i)}
-            key={planet.title} 
-            >
-            
-            </div>
+            {props.planets.map((planet, index) =>
+            <div key={index} className='card'
+            onClick={() => showPlanets(index)} >
+            <h3>{planet.title}</h3>
+        </div>
             )}
         </div>
         
