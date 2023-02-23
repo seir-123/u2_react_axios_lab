@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  background-color: #1e5356;
+}
+
+header {
+    background-color: #1c2d43;
+    justify-content: flex-start;
+    display: flex;
+}
+  
+header ul {
+  display: flex;
+  list-style: none;
+}
