@@ -16,7 +16,7 @@ const Main = () => {
             <Routes>
                 <Route path="/" element={<Home/>}/>
                 <Route path="/starships" element={<Starships starships={starships} setStarships={setStarships}/>}/>
-                <Route path="/starships/:name" element={<StarshipsPage starships={starships} setStarships={setStarships}/>}/>
+                <Route path="/starships/:name" element={<StarshipsPage starships={starships} setStarships={setStarships} />}/>
                 <Route path="/planets" element={<Planets/>}/>
                 <Route path="/characters" element={<Characters/>}/>
                 

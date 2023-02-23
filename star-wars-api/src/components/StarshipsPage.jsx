@@ -9,7 +9,7 @@ export default function StarshipsPage (props) {
 
     useEffect(() => {
         let selectedStarship = props.starships.find(
-            (starship) => starship.name === parseInt(name)
+            (starship) => starship.name === toString(name)
         )
         setStarship(selectedStarship)
     }, [props.starships, name])

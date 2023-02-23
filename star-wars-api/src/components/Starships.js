@@ -14,8 +14,8 @@ const Starships = (props) => {
 
     const showStarship = (starship) => {
         navigate(`${starship.name}`)
-        console.log("did it work?")
-        console.log()
+        console.log(starship.manufacturer)
+        
     }
 
     useEffect(() =>{
