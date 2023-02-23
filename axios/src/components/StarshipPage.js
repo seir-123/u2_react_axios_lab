@@ -30,7 +30,7 @@ const StarshipPage = () => {
       <h1>{starShips.name}</h1>
       <h2>Model: {starShips.model}</h2>
       <h3>Manufacturer: {starShips.manufacturer}</h3>
-      <h3>Created in: {starShips.created}</h3>
+      <h3>Length: {starShips.length} meters</h3>
       <Link to="/starshipslist">Return to Starship List</Link>
     </div>
   ) : null

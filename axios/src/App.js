@@ -20,7 +20,7 @@ function App() {
         <Route path="/CharactersList" element={<CharactersList />}/>
         <Route path="/StarshipsList/:ship_id" element={<StarshipPage />}></Route>
         <Route path="/PlanetsList/:planet_id" element={<PlanetsPage />}></Route>
-
+        <Route path="/CharactersList/:character_id" element={<CharactersPage />}></Route>
       </Routes>
     </div>
   );
