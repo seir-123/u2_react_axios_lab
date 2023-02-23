@@ -1,8 +1,8 @@
-export const BASE_URL = 'https://swapi.dev/api'
-export const SHIPS_URL = `${BASE_URL}+/Starships`
-export const  PEOPLE_URL = `${BASE_URL}+/People`
-export const  FILMS_URL = `${BASE_URL}+/Films`
-export const PLANETS_URL = `${BASE_URL}+/Planets`
-export const  SPECIES_URL = `${BASE_URL}+/Species`
-export const  VEHICLES_URL = `${BASE_URL}+/Vehicles`
+export const BASE_URL = 'https://swapi.dev/api/'
+export const SHIPS_URL = 'https://swapi.dev/api/starships/'
+export const  PEOPLE_URL = 'https://swapi.dev/api/people/'
+export const  FILMS_URL = 'https://swapi.dev/api/films/'
+export const PLANETS_URL = 'https://swapi.dev/api/planets/'
+export const  SPECIES_URL = 'https://swapi.dev/api/species/'
+export const  VEHICLES_URL = 'https://swapi.dev/api/vehicles/'
 

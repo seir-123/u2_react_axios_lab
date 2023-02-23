@@ -1,13 +1,26 @@
-export default function People ({People}){
+import { Link, useNavigate} from 'react-router-dom'
+
+
+export default function People (props) {
+    let navigate = useNavigate()
+    const showPeople = (index) => {
+        navigate(`${index}`)
+    }
 
     return (
         <div>
-        <h1>People List</h1>
-        {
-            People.map((people) => {
-                <h1>{people.name}</h1>
-            })
-        }
+        <Link to='/'>Home</Link>
+        <div className='grid' id='people'>
+            {props.people.map((people, i) =>
+            <div className='card'
+            onClick={() => showPeople(i)}
+            key={people.name} 
+            >
+            
+            </div>
+            )}
+        </div>
+        
     </div>
     )
 }

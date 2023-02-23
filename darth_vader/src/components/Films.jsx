@@ -1,16 +1,26 @@
+// import { Link, useNavigate} from 'react-router-dom'
 
-export default function Films (props) {
 
-  
+// export default function Films (props) {
+//     let navigate = useNavigate()
+//     const showFilms = (index) => {
+//         navigate(`${index}`)
+//     }
 
-    return (
-        <div>
-        <h1>Films List</h1>
-        {
-            props.Films.map((film) => {
-                <h1>{film.name}</h1>
-            })
-        }
-    </div>
-    )
-}
+//     return (
+//         <div>
+//         <Link to='/'>Home</Link>
+//         <div className='grid' id='films'>
+//             {props.films.map((film, i) =>
+//             <div className='card'
+//             onClick={() => showFilms(i)}
+//             key={film.name} 
+//             >
+            
+//             </div>
+//             )}
+//         </div>
+        
+//     </div>
+//     )
+// }
