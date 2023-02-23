@@ -21,10 +21,13 @@ const PeopleDetails = (props) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column"
           }}
         >
-          <h1>test</h1>
-        </div>
+          <h1>{person.name}</h1>
+          <h2>Height: {person.height}cm</h2>
+          <h3>Mass: {person.mass}</h3>
+          <p>Birth Year: {person.birth_year}</p>        </div>
       </div>
       <div className="info-wrapper">
         <div
@@ -34,14 +37,11 @@ const PeopleDetails = (props) => {
             flexDirection: "column",
           }}
         >
-          {/* <h3>Rating: {game.rating}/5</h3>
-            <h3>ESRB Rating: {game.esrb_rating ? game.esrb_rating.name : "no rating"}</h3> */}
         </div>
-        {/* <p>Release Date: {game.released}</p> */}
       </div>
     </div>
   ) : (
-    <h1>Species not found</h1>
+    <h1>Person not found</h1>
   );
 };
 

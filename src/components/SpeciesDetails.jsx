@@ -21,10 +21,14 @@ const SpeciesDetails = (props) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column"
           }}
         >
-          <h1>test</h1>
-        </div>
+          <h1>{species.name}</h1>
+          <h2>{species.classification}</h2>
+          <h3>{species.designation}</h3>
+          <p>Average Height: {species.average_height}cm</p>        
+          </div>
       </div>
       <div className="info-wrapper">
         <div
@@ -34,10 +38,7 @@ const SpeciesDetails = (props) => {
             flexDirection: "column",
           }}
         >
-          {/* <h3>Rating: {game.rating}/5</h3>
-            <h3>ESRB Rating: {game.esrb_rating ? game.esrb_rating.name : "no rating"}</h3> */}
         </div>
-        {/* <p>Release Date: {game.released}</p> */}
       </div>
     </div>
   ) : (

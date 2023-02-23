@@ -21,10 +21,13 @@ const FilmDetails = (props) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column"
           }}
         >
-          <h1>test</h1>
-        </div>
+          <h1>{film.title}</h1>
+          <h2>{film.opening_crawl}</h2>
+          <h3>Director: {film.director}</h3>
+          <p>Release Date: {film.release_date}</p>        </div>
       </div>
       <div className="info-wrapper">
         <div
@@ -34,14 +37,12 @@ const FilmDetails = (props) => {
             flexDirection: "column",
           }}
         >
-          {/* <h3>Rating: {game.rating}/5</h3>
-            <h3>ESRB Rating: {game.esrb_rating ? game.esrb_rating.name : "no rating"}</h3> */}
+            {/* <h3>ESRB Rating: {game.esrb_rating ? game.esrb_rating.name : "no rating"}</h3> */}
         </div>
-        {/* <p>Release Date: {game.released}</p> */}
       </div>
     </div>
   ) : (
-    <h1>Species not found</h1>
+    <h1>Film not found</h1>
   );
 };
 

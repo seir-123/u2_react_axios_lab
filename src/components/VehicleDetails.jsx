@@ -22,9 +22,13 @@ const VehicleDetails = (props) => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            flexDirection: "column"
           }}
         >
-          <h1>test</h1>
+          <h1>{vehicle.name}</h1>
+          <h2>{vehicle.manufacturer}</h2>
+          <h3>Credits: {vehicle.cost_in_credits}</h3>
+          <p>Length: {vehicle.length}</p>
         </div>
       </div>
       <div className="info-wrapper">
@@ -35,10 +39,7 @@ const VehicleDetails = (props) => {
             flexDirection: "column",
           }}
         >
-          {/* <h3>Rating: {game.rating}/5</h3>
-            <h3>ESRB Rating: {game.esrb_rating ? game.esrb_rating.name : "no rating"}</h3> */}
         </div>
-        {/* <p>Release Date: {game.released}</p> */}
       </div>
     </div>
   ) : (
