@@ -8,6 +8,7 @@ import { PLANETS_PATH } from '../globals'
 import { SHIP_PATH } from '../globals'
 import { CHARACTERS_PATH } from '../globals' 
 import axios from 'axios'
+import StarshipDetails from './StarshipDetails'
 
 
 
@@ -60,18 +61,17 @@ export default function Main () {
         <div className = "main">   
             <Routes>
                 <Route  path='/StarshipList'
-                element={<StarshipList
-                                starShips={starShips}/>} />
+                element={<StarshipList starShips={starShips}/>} />
 
                 <Route path='/Planets'
-                element={<Planets
-                                planets={planets}/>} />
+                element={<Planets planets={planets}/>} />
 
                 <Route path='/Characters'
-                element={<Characters
-                                characters={characters}/>} />
-                <Route path='/' 
-                element={<Home/>}/>                            
+                element={<Characters characters={characters}/>} />
+
+                <Route path='/' element={<Home/>}/>    
+
+                <Route path='/StarshipList/:index' element={<StarshipDetails starShips={starShips}/>}></Route>                        
             </Routes>
         </div>
     )

@@ -1,9 +1,25 @@
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
+
+
+
 export default function StarshipList ({starShips}) {
+
+    const [shipList, setShipList] = useState([]);
+  let navigate = useNavigate();
+  useEffect(() => {
+    setShipList(starShips);
+  }, []);
+  const showShips = (ship) => {
+    navigate(`${ship}`);
+  };
+
     return (
-        <div>
+        <div className='card'>
             {
                 starShips.map((starShip, index) =>(
-                       <div key={index}>
+                       <div key={index} onClick={() => showShips(index)}>
                         <h1> Model: {starShip.name}</h1>
                         <h4>Manufacturer: {starShip.manufacturer}</h4>
                         <h4>Length: {starShip.length}</h4>
