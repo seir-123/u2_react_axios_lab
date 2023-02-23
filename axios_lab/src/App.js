@@ -1,5 +1,5 @@
 //
-import { BASE_URL } from './globals'
+import { BASE_URL } from './Globals'
 
 import './App.css';
 
