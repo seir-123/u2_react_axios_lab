@@ -108,13 +108,13 @@ useEffect(() => {
           <main>
             <Routes>
               <Route path='/' element={<Home/>}></Route>  
-              <Route path='/Films' element={<Films/>}></Route>
-              <Route path='/People' element={<People/>}></Route>
-              <Route path='/Planets' element={<Planets/>}></Route>
-              <Route path='/Species' element={<Species/>}></Route>
-              <Route path='/StarshipsDetails' element={<StarshipsDetails/>}></Route>
-              <Route path='/Vehicles' element={<Vehicles/>}></Route>
-              <Route path='/StarshipsList/:index' element={<StarshipsList starshipsDetails={starshipsDetails}/>}></Route>
+              <Route path='/Films' element={<Films films={films}/>}></Route>
+              <Route path='/People' element={<People people={people}/>}></Route>
+              <Route path='/Planets' element={<Planets planets={planets}/>}></Route>
+              <Route path='/Species' element={<Species species={species}/>}></Route>
+              <Route path='/StarshipsDetails' element={<StarshipsDetails starshipsDetails={starshipsDetails}/>}></Route>
+              <Route path='/Vehicles' element={<Vehicles vehicles={vehicles}/>}></Route>
+              <Route path='/StarshipsList/:index' element={<StarshipsList starshipsList={starshipsDetails}/>}></Route>
             </Routes>
           </main>
         

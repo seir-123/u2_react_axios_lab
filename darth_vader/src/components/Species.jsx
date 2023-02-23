@@ -12,11 +12,11 @@ export default function Species (props) {
     return (
         <div>
         <Link to='/'>Home</Link>
-        <div className='grid' id='species'>
-            {props.planets.map((species, index) =>
+        <div className='grid'>
+            {props.species.map((species, index) =>
             <div key={index} className='card'
             onClick={() => showSpecies(index)} >
-            <h3>{species.title}</h3>
+            <h3>{species.name}</h3>
         </div>
             )}
         </div>

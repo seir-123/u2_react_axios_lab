@@ -16,7 +16,7 @@ export default function Planets (props) {
             {props.planets.map((planet, index) =>
             <div key={index} className='card'
             onClick={() => showPlanets(index)} >
-            <h3>{planet.title}</h3>
+            <h3>{planet.name}</h3>
         </div>
             )}
         </div>
