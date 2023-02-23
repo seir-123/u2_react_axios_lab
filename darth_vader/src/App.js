@@ -1,6 +1,8 @@
 import './App.css'
 import { useState, useEffect } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import axios from 'axios'
+
 import StarshipsList from './components/StarshipsList'
 import Nav from './components/Nav'
 import Home from './components/Home'
@@ -10,7 +12,7 @@ import Planets from './components/Planets'
 import Species from './components/Species'
 import StarshipsDetails from './components/StarshipsDetails'
 import Vehicles from './components/Vehicles'
-import { Route, Routes } from 'react-router-dom'
+
 import { BASE_URL } from './globals'
 import { SPECIES_URL } from './globals'
 import { FILMS_URL } from './globals'
@@ -112,7 +114,7 @@ useEffect(() => {
               <Route path='/Species' element={<Species/>}></Route>
               <Route path='/StarshipsDetails' element={<StarshipsDetails/>}></Route>
               <Route path='/Vehicles' element={<Vehicles/>}></Route>
-              <Route path='/StarshipsList' element={<StarshipsList starshipsDetails={starshipsDetails}/>}></Route>
+              <Route path='/StarshipsList/:index' element={<StarshipsList starshipsDetails={starshipsDetails}/>}></Route>
             </Routes>
           </main>
         

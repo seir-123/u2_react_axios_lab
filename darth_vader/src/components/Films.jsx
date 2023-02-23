@@ -10,10 +10,10 @@ export default function Films (props) {
     return (
         <div>
         <Link to='/'>Home</Link>
-        <div className='grid' id='films'>
-            {props.films.map((film, i) =>
+        <div className='grid'>
+            {props.films.map((film, index) =>
             <div className='card'
-            onClick={() => showFilms(i)}
+            onClick={() => showFilms(index)}
             key={film.title} 
             >
             
