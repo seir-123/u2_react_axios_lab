@@ -4,7 +4,7 @@ export default function Species(props){
 
     return (
         <div>
-            <Link to="/">Back</Link>
+            <Link to="/"><button>Back</button></Link>
         <div className="grid">
             {
                 props.species.map((spec)=> (

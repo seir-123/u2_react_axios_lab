@@ -15,7 +15,7 @@
   border: 0.5px solid rgba(0, 0, 0, 0.948);
   justify-content: space-around;
 }
-.card {
+.detail, .card {
   padding: 3vmin;
   margin: 2vmin;
   border: 0px 2px 2px 0px solid darkslategray;

@@ -13,15 +13,22 @@ const StarshipPage = (props) => {
   }, [props.starships, index])
 
   return starship ? (
+    <div>
+    <Link to="/Starships"><button>Back</button></Link>
     <div className="detail">
-        <Link to="/Starships"><button>Back</button></Link>
       <div className="detail-header">
-        <div style={{minWidth: '30em', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <h1>{starship.name}</h1>
+        <div style={{minWidth: '30em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'}}>
+        <h3>Model: {starship.model}</h3>
+          <h3>Manufacturer: {starship.manufacturer}</h3>
+          <h3>Capacity: {starship.cargo_capacity}</h3>
         </div>  
       </div>
       <div className="info-wrapper">
+        <h4 style={{color: 'green'}}>Price: {starship.cost_in_credits} Credits</h4>
         <div style={{display: 'flex', justifyContent: 'space-between'}}>
         </div>
+      </div>
       </div>
     </div>
   ) : <h1 className='loading'> Loading . . . </h1>;

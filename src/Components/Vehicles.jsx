@@ -4,7 +4,7 @@ export default function Vehicles(props){
 
     return (
         <div>
-        <Link to="/">Back</Link>
+        <Link to="/"><button>Back</button></Link>
         <div className="grid">
             {
                 props.vehicles.map((vehicle)=> (

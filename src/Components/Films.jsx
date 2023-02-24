@@ -4,7 +4,7 @@ export default function Films(props){
 console.log(props)
     return (
         <div>
-            <Link to="/">Back</Link>
+            <Link to="/"><button>Back</button></Link>
         <div className="grid">
             {
                 props.films.map((film)=> (

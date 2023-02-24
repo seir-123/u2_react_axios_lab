@@ -8,14 +8,12 @@ export default function StarshipsList(props){
 
     return (
         <div>
-            <Link to="/">Back</Link>
+            <Link to="/"><button>Back</button></Link>
             <div className="grid">
             {
                 props.starships.map((ship, index)=> (
                     <div onClick={()=>showShip(index)} key={index} className="card">
                         <h2>{ship.name}</h2>
-                        <h3>{ship.model}</h3>
-                        <h4>{ship.manufacturer}</h4>
                     </div>
                     )
                 )
