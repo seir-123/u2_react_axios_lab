@@ -2,11 +2,13 @@ import StarshipsList from './components/StarshipsList';
 import Planets from './components/Planets';
 import Characters from './components/Characters'
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import axios from 'axios'
 import Main from './components/Main'
 import './App.css';
 import './index'
 import { BASE_URL } from './globals';
+import StarshipPage from './components/StarshipPage'
 
 function App() {
   const [starships, setStarships] = useState ([])
@@ -41,11 +43,22 @@ useEffect (() => {
 
   return (
     <div className="App">
+      <header>
 {/* <Nav /> */}
+</header>
+
+  <Routes>
+<Route path="/ships/:id" element = 
+{<StarshipPage starships={starships}/>
+}/>
+
+</Routes>
 <Main />
-<StarshipsList starships={starships}/>
 <Planets planets={planets}/>
 <Characters characters={characters}/>
+<StarshipsList starships={starships}/>
+
+
    </div>
   );
 }
