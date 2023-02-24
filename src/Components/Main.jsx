@@ -1,5 +1,5 @@
 export default function Main(){
     return (
-        <h1>STAR WARS</h1>
+        <img className="logo" src="https://pluspng.com/img-png/png-star-wars-star-wars-logo-png-1600.png"/>
     )
 }

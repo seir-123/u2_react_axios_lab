@@ -17,5 +17,7 @@ export default function Nav(){
         <Link to="/Starships"element={<StarshipsList/>}><button>Starships</button></Link>
         <Link to="/Species"element={<Species/>}><button>Species</button></Link>
         </div>
+    
+
     )
 }
