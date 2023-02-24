@@ -27,6 +27,7 @@ import { VEHICLES_URL } from './globals'
 
 
 const App = () => {
+  const [starships, setStarships] = useState([])
   const [starshipsDetails, setStarshipsDetails] = useState([])
   const [films, setFilms] = useState([])
   const [people, setPeople] = useState([])
@@ -35,11 +36,11 @@ const App = () => {
   const [vehicles, setVehicles] = useState([])
 
   useEffect (() => {
-    const getData = async () => {
+    const getstarships = async () => {
     const response = await axios.get(`${BASE_URL}`)  
-    setStarshipsDetails(response.data.results)
+    setStarships(response.data.results)
     }
-    getData()
+    getstarships()
   })
   useEffect(() => {
       const getFilms = async () => {
@@ -49,6 +50,15 @@ const App = () => {
       }
       getFilms()
     }, [])
+
+useEffect(() => {
+  const getStartships = async () => {
+    const response = await axios.get(`${SHIPS_URL}`) 
+    // console.log(response.data.results)
+    setStarships(response.data.results)
+  }
+  getStartships()
+}, [])
 
 
 useEffect(() => {
@@ -106,15 +116,16 @@ useEffect(() => {
         <div className='routes-container'>
           <Nav />
           <main>
+           
             <Routes>
               <Route path='/' element={<Home/>}></Route>  
               <Route path='/Films' element={<Films films={films}/>}></Route>
               <Route path='/People' element={<People people={people}/>}></Route>
               <Route path='/Planets' element={<Planets planets={planets}/>}></Route>
               <Route path='/Species' element={<Species species={species}/>}></Route>
-              <Route path='/StarshipsDetails' element={<StarshipsDetails starshipsDetails={starshipsDetails}/>}></Route>
+              {/* <Route path='/StarshipsDetails' element={<StarshipsDetails starships={starships}/>}></Route> */}
               <Route path='/Vehicles' element={<Vehicles vehicles={vehicles}/>}></Route>
-              <Route path='/StarshipsList/:index' element={<StarshipsList starshipsList={starshipsDetails}/>}></Route>
+              <Route path='/StarshipsList/:index' element={<StarshipsDetails starships={starships}/>}></Route>
             </Routes>
           </main>
         
