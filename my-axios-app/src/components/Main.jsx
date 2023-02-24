@@ -12,7 +12,7 @@ export default function Main ()
       <Link to='./StarshipsList'>
         Starship List
       </Link>
-      
+       
     </nav>
           </div>
           )
