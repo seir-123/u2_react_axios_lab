@@ -1,17 +1,18 @@
 /* // */
-@import url('https://fonts.cdnfonts.com/css/star-wars');   /* IS THIS RIGHT */
-
+@import url('https://fonts.googleapis.com/css2?family=Gajraj+One&family=Nunito:wght@300;400&display=swap');
 
 body{
   text-align: center;
   color: yellow;
   background-image:  url("https://i.imgur.com/XjDz8Lc.jpg");       /* IS THIS RIGHT LOL */
   background-size: cover;
-  font-family: 'Star Wars', sans-serif;    /* ??  */
+  font-family: 'Gajraj One', cursive;
   letter-spacing: 2px;
-
 }
 
+.Nav{ 
+  font-family: 'Nunito', sans-serif;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -37,6 +38,8 @@ body{
 
 .App-link {
   color: #61dafb;
+
+  color: darkolivegreen;
 }
 
 @keyframes App-logo-spin {

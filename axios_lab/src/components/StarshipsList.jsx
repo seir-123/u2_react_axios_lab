@@ -1,26 +1,21 @@
+import { useNavigate } from "react-router-dom"
+
 export default function StarshipsList(props){
-// console.log(props.starships);
+
+    let navigate = useNavigate()
+    const showStarship = (index) => {
+        navigate(`${index}`)
+    }
+
     return(
-
-        <div className="grid">       
+        <div className="starshipsListContainer">
             {
-            props.ships.map((starship) => (
-                <div key={starship.id} className="card">
-                    <h4 className="labels">NAME</h4>
-                    <h2 className="resultsLarge">{starship.name}</h2>
-
-                    <h4 className="labels">MODEL</h4>
-                    <h3 className="resultsSmall">{starship.model}</h3>
-                    <h4 className="labels">MANUFACTURER</h4>
-                    <h3 className="resultsSmall">{starship.manufacturer}</h3>
-                    <h4 className="labels">CREW</h4>
-                    <h3 className="resultsSmall">{starship.crew}</h3>
-                    <h4 className="labels">PASSENGERS</h4>
-                    <h3 className="resultsSmall">{starship.name}</h3>
-
-                    <h2 className="resultsLarge"><span>$</span>{ starship.model }</h2>
-                </div>
-            ))}
+                props.results.map((starship, index) => (
+                    <div className="shipCard" key= {index} onClick={() => showStarship(index)}>
+                        <h4>{starship.name}</h4>
+                    </div>
+                ))
+            }
         </div>
     )
 }
