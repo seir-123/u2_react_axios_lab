@@ -23,6 +23,8 @@ const Starshippage = (props) => {
 return (
   <div className="detail">
     <h1>{ship.name}</h1>
+    <h1>{ship.model}</h1>
+    <h1>{ship.crew}</h1>
     
     <button><Link to="/StarshipsList">Back</Link></button>
   </div>

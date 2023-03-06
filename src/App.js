@@ -9,8 +9,10 @@ import Planets from './Components/Planets'
 import People from './Components/People'
 import Species from './Components/Species'
 import Landingpage from './Components/Landingpage'
-import Starshippage from './Components/Starshippage';
-
+import Starshippage from './Components/Starshippage'
+import Planetpage from './Components/Planetpage'
+import Peoplepage from './Components/Peoplepage'
+import Speciespage from './Components/Speciespage';
 
 
 
@@ -72,6 +74,9 @@ function App() {
         <Route path="/People" element={<People people={people} />} />
         <Route path="/Species" element={<Species species={species} />} /> 
         <Route path="/StarshipsList/:index" element={<Starshippage starships={starships}/>} />
+        <Route path="/planets/:index" element={<Planetpage planets={planets}/>} />
+        <Route path="/people/:index" element={<Peoplepage people={people}/>} />
+        <Route path="/species/:index" element={<Speciespage species={species}/>} />
       </Routes>
      
                       
