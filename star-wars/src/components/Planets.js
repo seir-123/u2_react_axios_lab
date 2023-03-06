@@ -1,13 +1,12 @@
-export default function Planets(props) {
+import { Link } from "react-router-dom"
+
+export default function Planet(props) {
     return (
         <div>
             {
                 props.planets.map((planet) => (
-                    <div key={planet.name} className='planets card'>
-                        <h1>{planet.name}</h1>
-                        <h3>Climate: {planet.climate}</h3>
-                        <h3>Terrain: {planet.terrain}</h3>
-                        <h3>Population: {planet.population}</h3>
+                    <div key={planet.name} className='planet card'>
+                        <Link to={`/planets/${planet.name}`} onClick={() => props.getselplanet(planet.url)}>{planet.name}</Link>
                     </div>
                 ))
             }

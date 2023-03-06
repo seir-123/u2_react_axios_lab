@@ -9,7 +9,8 @@ function App() {
   const [planets, setPlanets] = useState([])
   const [characters, setCharacters] = useState([])
   const [selectedShip, setSelectedShip] = useState([])
-  // const [selectedShipId, setSelectedShipId] = useState([])
+  const [selplanet, setselplanet] = useState([])
+  const [selchara, setselchara] = useState([])
 
   useEffect(() => {
     const getStarShips = async() => {
@@ -29,15 +30,46 @@ function App() {
     getCharacters()
   },[])
 
+  const getSelectedShip = async(ship) => {
+    const response = await axios.get(ship)
+    setSelectedShip(response.data)
+    if (selectedShip){
+      console.log(selectedShip)
+
+    }
+  }
+
+  const getselplanet = async(planet) => {
+    const response = await axios.get(planet)
+    setselplanet(response.data)
+    if (selplanet){
+      console.log(selplanet)
+
+    }
+  }
+
+  const getselchara = async(chara) => {
+    const response = await axios.get(chara)
+    setselchara(response.data)
+    if (selchara){
+      console.log(selchara)
+
+    }
+  }
+
   return (
     <div className="App">
       <Main starShips={starShips}
             planets={planets}
             characters={characters}
             selectedShip={selectedShip}
-            setSelectedShip={setSelectedShip}/>
+            getSelectedShip={getSelectedShip}
+            getselplanet={getselplanet}
+            selplanet={selplanet}
+            selchara={selchara}
+            getselchara={getselchara}/>
     </div>
   )
 }
 
-export default App;
+export default App
