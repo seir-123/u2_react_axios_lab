@@ -13,18 +13,7 @@ import Species from './components/Species'
 import StarshipsDetails from './components/StarshipsDetails'
 import Vehicles from './components/Vehicles'
 
-import { BASE_URL } from './globals'
-import { SPECIES_URL } from './globals'
-import { FILMS_URL } from './globals'
-import { PEOPLE_URL } from './globals'
-import { PLANETS_URL } from './globals'
-import { SHIPS_URL } from './globals'
-import { VEHICLES_URL } from './globals'
-
-
-
-
-
+import { BASE_URL, SPECIES_URL, FILMS_URL, PEOPLE_URL, PLANETS_URL, SHIPS_URL, VEHICLES_URL } from './globals'
 
 const App = () => {
   const [starships, setStarships] = useState([])
@@ -32,52 +21,49 @@ const App = () => {
   const [films, setFilms] = useState([])
   const [people, setPeople] = useState([])
   const [planets, setPlanets] = useState([])
-  const [species, setSpecies] = useState ([])
+  const [species, setSpecies] = useState([])
   const [vehicles, setVehicles] = useState([])
 
-  useEffect (() => {
+  useEffect(() => {
     const getstarships = async () => {
-    const response = await axios.get(`${BASE_URL}`)  
-    setStarships(response.data.results)
+      const response = await axios.get(`${BASE_URL}`)
+      setStarships(response.data.results)
     }
     getstarships()
-  })
+  }, [])
+
   useEffect(() => {
-      const getFilms = async () => {
-        const response = await axios.get(`${FILMS_URL}`) 
-        console.log(response.data.results)
-        setFilms(response.data.results)
-      }
-      getFilms()
-    }, [])
+    const getFilms = async () => {
+      const response = await axios.get(`${FILMS_URL}`)
+      setFilms(response.data.results)
+    }
+    getFilms()
+  }, [])
 
-useEffect(() => {
-  const getStartships = async () => {
-    const response = await axios.get(`${SHIPS_URL}`) 
-    // console.log(response.data.results)
-    setStarships(response.data.results)
-  }
-  getStartships()
-}, [])
+  useEffect(() => {
+    const getStarships = async () => {
+      const response = await axios.get(`${SHIPS_URL}/1`)
+      setStarships(response.data)
+    }
+    getStarships()
+  }, [])
 
+  useEffect(() => {
+    const getStartshipsDetails = async () => {
+      const response = await axios.get(`${SHIPS_URL}/1`)
+      setStarshipsDetails(response.data.results)
+    }
+    getStartshipsDetails()
+  }, [])
 
-useEffect(() => {
-  const getStartshipsDetails = async () => {
-    const response = await axios.get(`${SHIPS_URL}`) 
-    // console.log(response.data.results)
-    setStarshipsDetails(response.data.results)
-  }
-  getStartshipsDetails()
-}, [])
+  useEffect(() => {
+    const getPeople = async () => {
+      const response = await axios.get(`${PEOPLE_URL}`)
+      setPeople(response.data.results)
+    }
+    getPeople()
+  }, [])
 
- useEffect(() => {
-      const getPeople = async () => {
-        const response = await axios.get(`${PEOPLE_URL}`) 
-        console.log(response.data.results)
-        setPeople(response.data.results)
-      }
-      getPeople()
-    }, [])
 
    useEffect(() => {
       const getPlanets = async () => {
@@ -123,7 +109,7 @@ useEffect(() => {
               <Route path='/People' element={<People people={people}/>}></Route>
               <Route path='/Planets' element={<Planets planets={planets}/>}></Route>
               <Route path='/Species' element={<Species species={species}/>}></Route>
-              {/* <Route path='/StarshipsDetails' element={<StarshipsDetails starships={starships}/>}></Route> */}
+              <Route path='/StarshipsDetails' element={<StarshipsDetails starships={starships}/>}></Route>
               <Route path='/Vehicles' element={<Vehicles vehicles={vehicles}/>}></Route>
               <Route path='/StarshipsList/:index' element={<StarshipsDetails starships={starships}/>}></Route>
             </Routes>
