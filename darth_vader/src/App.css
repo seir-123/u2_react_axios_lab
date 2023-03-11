@@ -1,4 +1,7 @@
-
+body {
+  background-color: #282c34;
+  
+}
 
 .grid {
   display: grid;
@@ -11,7 +14,7 @@
 }
 
 .card {
-    border-radius: 20%;
+   
     display: flex;
     justify-content: center;
     align-items: center;
