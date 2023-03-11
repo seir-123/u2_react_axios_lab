@@ -1,5 +1,6 @@
 import React from 'react'
-import { Link, useNavigate} from 'react-router-dom'
+import { useNavigate} from 'react-router-dom'
+
 
 
 export default function Vehicles (props) {
@@ -10,7 +11,7 @@ export default function Vehicles (props) {
 
     return (
         <div>
-        <Link to='/'>Home</Link>
+     
         <div className='grid' id='vehicles'>
             {props.vehicles.map((vehicle, index) =>
             <div key={index} className='card'

@@ -1,20 +1,11 @@
 const Home = () => {
-
     return (
-      <div className="home">
         <div>
-          <img
-            style={{ display: 'block', maxWidth: '100%' }}
-            src="https://www.sitew.com/images/blog/articles/site-jeux/gaming.jpeg"
-            alt="logo"
-          />
+            <h1>
+                StarWars
+            </h1>
         </div>
-        <div>
-          <h1>WELCOME!</h1>
-        </div>
-      </div>
     )
-  }
-  
-  export default Home
-  
+}
+
+export default Home 
