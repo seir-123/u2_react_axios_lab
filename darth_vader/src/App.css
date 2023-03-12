@@ -1,0 +1,45 @@
+body {
+  background-color: #282c34;
+  
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: .5fr .5fr;
+  grid-gap: 40px;
+  height: 100vh;
+  margin: 30px;
+  text-align: center;
+  
+}
+
+.card {
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(156, 127, 21);
+    background-color: rgb(26, 16, 16);
+    cursor: pointer;
+}
+
+
+.App {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.navBar {
+    display: grid;
+    justify-content: space-evenly;
+}
+
+
+
+
