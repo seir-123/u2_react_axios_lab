@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Star+Wars&display=swap');
+
+body {
+  background-color: black;
+  color: white;
+  font-family: 'Star Wars', sans-serif;
+}
+
+.header {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.home {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home h2 {
+  font-size: 2rem;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.film {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.film h3 {
+  font-size: 1.5rem;
+}
+
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.planet {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.planet h3 {
+  font-size: 1.5rem;
+}
+
+.ship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ship {
+  background-color: black;
+  padding: 1rem;
+  text-align: center;
+}
+
+.ship h3 {
+  font-size: 1.5rem;
+}
+
+.star-wars-image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
