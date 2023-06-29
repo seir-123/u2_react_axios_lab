@@ -1,11 +1,19 @@
-import { useEffect, useState } from 'react';
 import axios from 'axios';
+import { useState, useEffect } from 'react';
 import { BASE_URL } from '../globals';
+import { useNavigate } from "react-router-dom"
 
-const Planets = () => {
+const PlanetList = () => {
   const [planets, setPlanets] = useState([]);
+ 
+  let navigate = useNavigate()
 
-  useEffect(() => {
+const showPlanet = (planet) => {
+  navigate(`${planet.name}`, {state:{planet:planet}})
+
+}
+
+useEffect(() => {
     const getPlanets = async () => {
       try {
         const response = await axios.get(`${BASE_URL}planets`);
@@ -21,12 +29,12 @@ const Planets = () => {
   console.log(planets);
 
   if (planets.length === 0) {
-    return <div>Loading...Let it a breathe a bit.</div>;
+    return <div>Loading...Don't force it.</div>;
   } else {
     return (
       <div className="planet-grid">
         {planets.map((planet, index) => (
-          <div key={index} className="planet">
+          <div key={index} className="planet" onClick={()=> showPlanet(planet)}>
             <h3>{planet.name}</h3>
           </div>
         ))}
@@ -35,5 +43,4 @@ const Planets = () => {
   }
 };
 
-export default Planets;
-
+export default PlanetList;

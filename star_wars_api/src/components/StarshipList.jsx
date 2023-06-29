@@ -13,8 +13,7 @@ const showShip = (starship) => {
 
 }
 
-
-  useEffect(() => {
+useEffect(() => {
     const getStarships = async () => {
       try {
         const response = await axios.get(`${BASE_URL}starships`);

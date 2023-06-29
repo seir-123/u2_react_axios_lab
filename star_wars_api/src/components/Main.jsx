@@ -5,6 +5,9 @@ import FilmList from './FilmList';
 import PlanetList from './PlanetList';
 import CharacterList from './CharacterList';
 import StarshipPage from './StarshipPage';
+import FilmPage from './FilmPage';
+import CharacterPage from './CharacterPage';
+import PlanetPage from './PlanetPage';
 
 const Main = () => {
   return (
@@ -14,8 +17,11 @@ const Main = () => {
         <Route path="/starships" element={<StarshipsList />} />
         <Route path="/starships/:name" element={<StarshipPage />} />
         <Route path="/films" element={<FilmList />} />
+        <Route path="/films/:name" element={<FilmPage />} />
         <Route path="/planets" element={<PlanetList />} />
+        <Route path="/planets/:name" element={<PlanetPage />} />
         <Route path="/characters" element={<CharacterList />} />
+        <Route path="/characters/:name" element={<CharacterPage />} />
       </Routes>
     </div>
   );
